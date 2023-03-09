@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       colors: {
         lightblue: "#f1f5f6",
+        darkenlightblue: "#E5ECEE",
+        lightgray: "#8b8b8b",
+        mediumgray: "#4f4f4f",
         darkgray: "#2d2d2d",
       },
       backgroundImage: {
@@ -33,6 +36,7 @@ module.exports = {
       width: {
         "20vw": "20vw",
         "50vw": "50vw",
+        "85vw": "85vw",
         "95vw": "95vw",
       },
       maxHeight: {

@@ -1,6 +1,24 @@
-import React from "react";
+// TODO: Aplicar o tilt dentro do card principal
+// TODO: Implementar o sistema de rolagem para baixo
+
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
+import { bannerData, bannerGifs } from "@/data/banner";
 
 export default function Banner() {
+  const count = useRef<number>(0);
+  const [src, setSrc] = useState<string>("/html.webp");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      count.current += 1;
+      setSrc(() => bannerGifs[count.current % bannerGifs.length]);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [count, src]);
+
   return (
     <main
       id="home"
@@ -9,18 +27,11 @@ export default function Banner() {
       <div className="flex justify-between items-center flex-row w-full h-auto">
         <div className="w-50vw h-40vh p-3 flex justify-center items-start flex-col">
           <h1 className="text-4xl text-white font-semibold" id="home">
-            Olá, me chamo Lucas Palhano.
+            {bannerData.title}
           </h1>
-          <h2 className="text-3xl text-white mt-5">
-            Sou um estudante de programação apaixonado por tecnologia e
-            inovação, buscando contribuir com a contrução de um futuro melhor.
-          </h2>
+          <h2 className="text-3xl text-white mt-5">{bannerData.subtitle}</h2>
         </div>
-        <img
-          className="max-w-20vw max-h-30vh"
-          src="https://media0.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif?cid=790b76116ae5338a3995ed13f1488ae515116f3fc7acf45e&rid=giphy.gif&ct=s"
-          alt="Ilustracao"
-        />
+        <img className="max-w-20vw max-h-30vh" src={src} alt="Ilustracao" />
       </div>
       <div className="h-7 w-9 bg-down bg-cover bg-no-repeat bg-center"></div>
     </main>

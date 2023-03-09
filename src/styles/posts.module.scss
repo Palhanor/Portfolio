@@ -1,0 +1,77 @@
+.artigos {
+  @extend %secao;
+
+  &__titulo {
+    @extend %titulo-secao;
+  }
+
+  &__post {
+    width: 100%;
+    border-radius: 10px;
+    background-color: $white;
+    margin-bottom: 1rem;
+
+    @include laptop() {
+      @include flexContainer(space-between);
+      transition: 0.2s;
+      max-height: 35vh;
+      margin-bottom: 1.5rem;
+    }
+
+    @include desktop() {
+      max-height: 20vh;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  &__imagem {
+    display: none;
+
+    @include laptop() {
+      display: block;
+      width: 30%;
+      border-radius: 10px 0 0 10px;
+      object-fit: cover;
+    }
+  }
+
+  &__conteudo {
+    padding: 1rem;
+    width: 100%;
+
+    @include tablet() {
+      padding: 1.5rem 2rem 1.5rem 1.5rem;
+    }
+
+    @include laptop() {
+      width: 70%;
+      padding: 1rem 2rem 1rem 1.5rem;
+    }
+
+    @include desktop() {
+      padding: 1.5rem 3rem 1.5rem 2rem;
+    }
+  }
+
+  &__nome {
+    @extend %subtitulo-secao;
+  }
+
+  &__descricao {
+    @extend %texto-descricao;
+  }
+
+  &__data {
+    @extend %data;
+  }
+
+  &__tag {
+    @extend %tag;
+    color: $black;
+    background-color: $cinzaQuaseClaro;
+  }
+}

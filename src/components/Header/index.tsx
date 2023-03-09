@@ -1,9 +1,29 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Header() {
+  const [scroll, setScroll] = useState<number>(0);
+
+  const changeScroll = () => {
+    setScroll(() => window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeScroll);
+    console.log(scroll);
+    return () => window.removeEventListener("scroll", changeScroll);
+  });
+
   return (
-    <nav className="bg-lightblue h-10vh pr-10 pl-10 flex items-center justify-between fixed top-0 z-10 w-full">
+    <nav
+      className={
+        scroll == 0
+          ? "bg-lightblue h-10vh pr-10 pl-10 flex items-center justify-between fixed top-0 z-10 w-full"
+          : "bg-lightblue h-10vh pr-10 pl-10 flex items-center justify-between fixed top-0 z-10 w-full shadow-md"
+      }
+    >
       <ul className="flex justify-between w-20vw list-none text-xl">
         <li className="cursor-pointer">Sobre</li>
         <li className="cursor-pointer">Portfólio</li>

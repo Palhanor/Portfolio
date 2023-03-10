@@ -34,47 +34,48 @@ export default function Posts() {
     }
   };
 
+  const styleSheet = {
+    container: "mt-6vh mb-10vh ml-5vw mr-5vw",
+    sectionTitle: "mb-7 text-3xl",
+    post: "w-full bg-white rounded-lg mb-8  ease-in-out duration-200 hover:scale-[1.005] hover:shadow-md",
+    postUrl: "flex justify-between max-h-[22vh]",
+    postImg: "w-1/3 rounded-l-lg object-cover",
+    postContent: "pt-6 pr-10 pb-6 pl-8 w-full",
+    postDate: "text-lightgray mt-1 mb-1 text-sm",
+    postTitle: "text-lg mb-2",
+    postDescription: "mb-2 text-mediumgray",
+    postTag: "bg-darkenlightblue text-sm inline-block rounded-sm p-1",
+    button: () => {
+      const baseStyle =
+        "mt-5 pt-4 pb-4 pl-10 pr-10 rounded-md text-white block m-auto";
+      if (morePosts) return `${baseStyle} bg-sky-600 hover:bg-sky-700`;
+      else return `${baseStyle} bg-zinc-500`;
+    },
+  };
+
   return (
-    <section id="artigos" className="mt-6vh mb-10vh ml-5vw mr-5vw">
-      <h2 className="mb-5 text-3xl">Artigos</h2>
+    <section id="artigos" className={styleSheet.container}>
+      <h2 className={styleSheet.sectionTitle}>Artigos</h2>
       {posts.map((post: any) => (
-        <article
-          key={post.id}
-          className="w-full bg-white rounded-lg mb-8  ease-in-out duration-200 hover:scale-[1.005] hover:shadow-md"
-        >
-          <a
-            href={post.url}
-            target="_blank"
-            className="flex justify-between max-h-[22vh]"
-          >
+        <article key={post.id} className={styleSheet.post}>
+          <a href={post.url} target="_blank" className={styleSheet.postUrl}>
             <img
               src={post.imgSrc}
               alt={post.title}
-              className="w-1/3 rounded-l-lg object-cover"
+              className={styleSheet.postImg}
             />
-            <div className="pt-6 pr-10 pb-6 pl-8 w-full">
-              <div className="text-lightgray mt-1 mb-1 text-sm">
-                {post.date}
-              </div>
-              <h3 className="text-lg mb-2">{post.title}</h3>
-              <p className="mb-2 text-mediumgray">
-                {truncateText(post.discription)}
+            <div className={styleSheet.postContent}>
+              <div className={styleSheet.postDate}>{post.date}</div>
+              <h3 className={styleSheet.postTitle}>{post.title}</h3>
+              <p className={styleSheet.postDescription}>
+                {truncateText(post.description)}
               </p>
-              <span className="bg-darkenlightblue text-sm inline-block rounded-sm p-1">
-                {post.platform}
-              </span>
+              <span className={styleSheet.postTag}>{post.platform}</span>
             </div>
           </a>
         </article>
       ))}
-      <button
-        onClick={loadNewPosts}
-        className={
-          morePosts
-            ? "mt-5 pt-4 pb-4 pl-10 pr-10 bg-sky-600 rounded-md text-white block m-auto hover:bg-sky-700"
-            : "mt-5 pt-4 pb-4 pl-10 pr-10 bg-zinc-500 rounded-md text-white block m-auto"
-        }
-      >
+      <button onClick={loadNewPosts} className={styleSheet.button()}>
         Carregar mais
       </button>
     </section>

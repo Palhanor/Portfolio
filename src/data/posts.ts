@@ -5,7 +5,7 @@ export const postsData = [
         imgSrc: "https://cdn-images-1.medium.com/max/1024/1*_yybdN1rMCKmweos2r-Z2A.png",
         date: "02/03/2023",
         title: "Criação de ASCII Art usando Python",
-        discription: `Eu sempre achei muito interessante aquelas ilustrações feitas em terminais de computadores
+        description: `Eu sempre achei muito interessante aquelas ilustrações feitas em terminais de computadores
          usando apenas dígitos do teclado, ao clássico estilo Matrix. Este estilo de desenho digital é chamado de ASCII Art, 
          e pesquisando um pouco sobre este assunto eu percebi que seria possível desenvolver um algoritmo de geração 
          de imagens e vídeos neste estilo.`,
@@ -17,7 +17,7 @@ export const postsData = [
         imgSrc: "https://cdn-images-1.medium.com/max/1024/1*7RnsdscHeMix46awfd-vtA.png",
         date: "13/02/2023",
         title: "O Zen do Java e a Developer Experience (DX)",
-        discription: `Muitas vezes nós desenvolvedores ouvimos falar sobre UX (User Experience), 
+        description: `Muitas vezes nós desenvolvedores ouvimos falar sobre UX (User Experience), 
         e nos preocupamos em desenvolver sistema amigáveis e intuitivos para os usuários, uma vez 
         que sistemas devem ser desenvolvidos para resolver problemas, e não criá-los. 
         Contudo, em muitas ocasiões pensamos pouco sobre a qualidade do nosso ambiente de desenvolvimento, 
@@ -30,7 +30,7 @@ export const postsData = [
         imgSrc: "https://cdn-images-1.medium.com/max/1000/0*ZFz5UCEjjBz7Qg8k",
         date: "28/01/2023",
         title: "Buscando um bom algoritmo de buscas",
-        discription: `No dia a dia é normal não conseguirmos encontrar coisas que precisamos, 
+        description: `No dia a dia é normal não conseguirmos encontrar coisas que precisamos, 
         como o controle da TV que está na nossa mão ou os óculos que estão justamente onde deveriam estar
         , ou seja, na frente dos nossos olhos. Isso é normal, e apesar do inconveniente momentâneo, 
         não gera grandes transtornos e às vezes até rende boas risadas.`,
@@ -42,7 +42,7 @@ export const postsData = [
         imgSrc: "https://cdn-images-1.medium.com/max/500/0*-xex7RYPY0ACVOeV.gif",
         date: "12/01/2023",
         title: "O inevitável vício em Inteligências Artificiais",
-        discription: `[…] Eu me tornei vítima do vício em Inteligência Artificial. 
+        description: `[…] Eu me tornei vítima do vício em Inteligência Artificial. 
         Percebi que estou usando a AI para realizar todos os tipos de tarefas, 
         desde as mais complexas até as mais simples, e isso tem prejudicado minha 
         capacidade de tomar decisões e raciocinar por conta própria. Eu me vejo 
@@ -59,7 +59,7 @@ export const postsData = [
         imgSrc: "https://cdn-images-1.medium.com/max/700/1*jNyIXzCrMC7gxQARFaFnPA.jpeg",
         date: "31/12/2022",
         title: "Perdendo na Mega da Virada com estilo usando Python",
-        discription: `Quem quer ser um meio bilionário? Não olhem para mim, 
+        description: `Quem quer ser um meio bilionário? Não olhem para mim, 
         eu preferiria ser um bilionário por completo! Brincadeiras à parte, 
         a Mega da Virada está com um prêmio de R$ 500.000.000,00 o que pode 
         ser lido como meio bilhão de reais, ou a primeira parcela do iPhone 

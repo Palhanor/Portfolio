@@ -1,3 +1,5 @@
+// TODO: Adicionar o Medium entre as redes sociais
+
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -7,44 +9,55 @@ import Link from "next/link";
 export default function Header() {
   const [scroll, setScroll] = useState<number>(0);
 
-  const changeScroll = () => {
-    setScroll(() => window.scrollY);
-  };
-
   useEffect(() => {
     window.addEventListener("scroll", changeScroll);
     return () => window.removeEventListener("scroll", changeScroll);
   });
 
+  const changeScroll = () => {
+    setScroll(() => window.scrollY);
+  };
+
+  const styleSheet = {
+    navbar: (scroll: number) => {
+      const baseStyle =
+        "bg-lightblue h-10vh pr-10 pl-10 flex items-center justify-between fixed top-0 z-10 w-full";
+      if (scroll == 0) return baseStyle;
+      else return `${baseStyle} shadow-md`;
+    },
+    listItems: "flex justify-around w-20vw list-none text-xl",
+    item: "cursor-pointer",
+    logo: "h-5vh cursor-pointer",
+    listSocial: "flex justify-end w-20vw list-none text-xl",
+    social: "ml-7",
+    socialImg: "w-10 h-10",
+  };
+
   return (
-    <nav
-      className={
-        scroll == 0
-          ? "bg-lightblue h-10vh pr-10 pl-10 flex items-center justify-between fixed top-0 z-10 w-full"
-          : "bg-lightblue h-10vh pr-10 pl-10 flex items-center justify-between fixed top-0 z-10 w-full shadow-md"
-      }
-    >
-      <ul className="flex justify-around w-20vw list-none text-xl">
-        {headerNav.map((nav) => (
-          <li key={nav} className="cursor-pointer">
-            {nav}
-          </li>
-        ))}
-      </ul>
-      <img src="/logo_preta.png" alt="Logo" className="h-5vh cursor-pointer" />
-      <ul className="flex justify-end w-20vw list-none text-xl">
-        {headerSocial.map((social) => (
-          <li key={social.imgAlt} className="ml-7">
-            <Link href={social.url} target="_blank">
-              <img
-                src={social.imgSrc}
-                alt={social.imgAlt}
-                className="w-10 h-10"
-              />
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <header>
+      <nav className={styleSheet.navbar(scroll)}>
+        <ul className={styleSheet.listItems}>
+          {headerNav.map((item) => (
+            <li key={item} className={styleSheet.item}>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <img src="/logo_preta.png" alt="Logo" className={styleSheet.logo} />
+        <ul className={styleSheet.listSocial}>
+          {headerSocial.map((social) => (
+            <li key={social.imgAlt} className={styleSheet.social}>
+              <Link href={social.url} target="_blank">
+                <img
+                  src={social.imgSrc}
+                  alt={social.imgAlt}
+                  className={styleSheet.socialImg}
+                />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
   );
 }

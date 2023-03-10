@@ -15,6 +15,8 @@ module.exports = {
         down: "url('/down.png')",
       },
       margin: {
+        "5vh": "5vh",
+        "5vw": "5vw",
         "6vh": "6vh",
         "10vh": "10vh",
         "12vh": "12vh",
@@ -29,6 +31,7 @@ module.exports = {
       height: {
         "5vh": "5vh",
         "10vh": "10vh",
+        "15vh": "15vh",
         "40vh": "40vh",
         "85vh": "85vh",
         "100vh": "100vh",
@@ -37,6 +40,7 @@ module.exports = {
         "20vw": "20vw",
         "50vw": "50vw",
         "85vw": "85vw",
+        "90vw": "90vw",
         "95vw": "95vw",
       },
       maxHeight: {

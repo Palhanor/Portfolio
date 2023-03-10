@@ -1,3 +1,7 @@
+// TODO: Criar campo de contato
+// TODO: Permitir baixar o curriculo
+// TODO: Adicionar suporte para o Medium e E-mail
+
 // import Image from "next/image";
 // import { Inter } from "next/font/google";
 import Banner from "../components/Banner";
@@ -18,6 +22,7 @@ export default function Home() {
       <About />
       <History />
       <Projects />
+      {/* <Contact /> */}
       <Posts />
       <Footer />
     </>

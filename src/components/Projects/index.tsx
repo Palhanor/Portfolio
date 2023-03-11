@@ -1,124 +1,68 @@
+import { projectsData } from "@/data/projects";
+import Link from "next/link";
 import React from "react";
 
 export default function Projects() {
+  const tagBackground = (name: string) => {
+    switch (name) {
+      case "Python":
+        return "bg-yellow-500";
+      case "TypeScript":
+        return "bg-sky-700 text-white";
+      case "React Native":
+        return "bg-sky-400";
+      case "TailwindsCSS":
+        return "bg-teal-500";
+      case "Expo":
+        return "bg-slate-200";
+      case "NextJS":
+        return "bg-gray-600 text-white";
+    }
+  };
+
+  const styleSheet = {
+    section: "my-section",
+    sectionTitle: "my-section-title",
+    projectList: "grid grid-cols-2 gap-5 mt-5",
+    project:
+      "relative bg-white bg-cover bg-no-repeat bg-center h-[40vh] shadow-md rounded-lg cursor-pointer p-2 ease-in-out duration-100 hover:shadow-lg",
+    banner: "h-1/2 rounded-md w-full object-cover object-top",
+    logo: "rounded-full -mt-10 h-20 border-white border-solid border-4 absolute inset-x-1/2 -ml-10",
+    content: "px-3 mt-5",
+    title: "text-xl text-zinc-700 font-semibold mb-3",
+    about: "text-md text-zinc-600 mb-4",
+    tag: (tech: string) => `my-tag mr-2 ${tagBackground(tech)}`,
+  };
+
   return (
-    <section id="portfolio" className="portfolio">
-      <h2 className="portfolio__titulo">Portfólio</h2>
-      <ul className="portfolio__cards">
-        <li id="notely" className="portfolio__card-borda">
-          <div className="portfolio__card-imagem portfolio__card-imagem--notely"></div>
-          <div className="portfolio__card-tela"></div>
-          <div className="portfolio__card-texto">
-            <h3 className="portfolio__card-titulo">Notely</h3>
-            <p className="portfolio__card-descricao">
-              O Notely é um sistema otimizado de criação e gestão de notas em
-              markdown, que permite uma maior produtividade por aliar
-              simplicidade, organização e personalização.
-            </p>
-            <h4 className="portfolio__card-subtitulo">Tecnologias</h4>
-            <span className="portfolio__card-tag tag-react">React Native</span>
-            <span className="portfolio__card-tag tag-expo">Expo</span>
-            <span className="portfolio__card-tag tag-typescript">
-              TypeScript
-            </span>
-            <h4 className="portfolio__card-subtitulo">Links</h4>
-            <a
-              href="https://github.com/Palhanor/Notely"
-              target="_blank"
-              className="portfolio__card-link"
-            >
-              Github
-            </a>
-            <a
-              href="https://www.behance.net/gallery/151573985/Notely-Aplicativo-de-notas"
-              target="_blank"
-              className="portfolio__card-link"
-            >
-              Behance
-            </a>
-            <a
-              href="https://www.figma.com/proto/m8hfIAfIwQXoQR1ulxm3GM/Notely?scaling=scale-down&page-id=0%3A1&starting-point-node-id=63%3A325&node-id=63%3A325"
-              target="_blank"
-              className="portfolio__card-link"
-            >
-              Figma
-            </a>
-          </div>
-        </li>
-        <li id="qrkey" className="portfolio__card-borda">
-          <div className="portfolio__card-imagem portfolio__card-imagem--qrkey"></div>
-          <div className="portfolio__card-tela"></div>
-          <div className="portfolio__card-texto">
-            <h3 className="portfolio__card-titulo">QR Key</h3>
-            <p className="portfolio__card-descricao">
-              O QR Key tem como intuito de permitir a criação e visualização de
-              QR Codes privados de forma simples e intuitiva, bastando
-              configurar uma senha mestra necessária para sua decodificação.
-            </p>
-            <h4 className="portfolio__card-subtitulo">Tecnologias</h4>
-            <span className="portfolio__card-tag tag-react">React Native</span>
-            <span className="portfolio__card-tag tag-expo">Expo</span>
-            <span className="portfolio__card-tag tag-typescript">
-              TypeScript
-            </span>
-            <h4 className="portfolio__card-subtitulo">Links</h4>
-            <a
-              href="https://github.com/Palhanor/QR-Key"
-              target="_blank"
-              className="portfolio__card-link"
-            >
-              Github
-            </a>
-          </div>
-        </li>
-        <li id="dynos" className="portfolio__card-borda">
-          <div className="portfolio__card-imagem portfolio__card-imagem--dynos"></div>
-          <div className="portfolio__card-tela"></div>
-          <div className="portfolio__card-texto">
-            <h3 className="portfolio__card-titulo">DynOS</h3>
-            <p className="portfolio__card-descricao">
-              DynOS (Dynamic OS) se trata de um programa desktop voltado para a
-              automação na manipulação de arquivos e diretórios do computador de
-              forma dinâmica e automatizada.
-            </p>
-            <h4 className="portfolio__card-subtitulo">Tecnologias</h4>
-            <span className="portfolio__card-tag tag-python">Python</span>
-            <h4 className="portfolio__card-subtitulo">Links</h4>
-            <a
-              href="https://github.com/Palhanor/DynOS"
-              target="_blank"
-              className="portfolio__card-link"
-            >
-              Github
-            </a>
-          </div>
-        </li>
-        <li id="website" className="portfolio__card-borda">
-          <div className="portfolio__card-imagem portfolio__card-imagem--website"></div>
-          <div className="portfolio__card-tela"></div>
-          <div className="portfolio__card-texto">
-            <h3 className="portfolio__card-titulo">Website pessoal</h3>
-            <p className="portfolio__card-descricao">
-              Website pessoal criado como uma vitrine profissional própria,
-              contendo informações relevantes acerca de minha trajetória,
-              motivações e projetos realizados ao longo do tempo.
-            </p>
-            <h4 className="portfolio__card-subtitulo">Tecnologias</h4>
-            <span className="portfolio__card-tag tag-html">HTML5</span>
-            <span className="portfolio__card-tag tag-scss">SCSS</span>
-            <span className="portfolio__card-tag tag-javascript">
-              JavaScript
-            </span>
-            <h4 className="portfolio__card-subtitulo">Links</h4>
-            <a
-              href="https://github.com/Palhanor/website"
-              target="_blank"
-              className="portfolio__card-link"
-            >
-              Github
-            </a>
-          </div>
-        </li>
+    <section id="portfolio" className={styleSheet.section}>
+      <h2 className={styleSheet.sectionTitle}>Portfólio</h2>
+      <ul className={styleSheet.projectList}>
+        {projectsData.map((project) => (
+          <Link key={project.id} href={`/projetos/${project.id}`}>
+            <li id={project.id} className={styleSheet.project}>
+              <img
+                src={`/projects/${project.id}/banner.png`}
+                alt={`${project.name} banner`}
+                className={styleSheet.banner}
+              ></img>
+              <img
+                src={`/projects/${project.id}/logo.png`}
+                alt={`${project.name} logo`}
+                className={styleSheet.logo}
+              />
+              <div className={styleSheet.content}>
+                <h3 className={styleSheet.title}>{project.name}</h3>
+                <p className={styleSheet.about}>{project.about}</p>
+                {project.tech.map((tech) => (
+                  <span key={tech} className={styleSheet.tag(tech)}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </li>
+          </Link>
+        ))}
       </ul>
     </section>
   );

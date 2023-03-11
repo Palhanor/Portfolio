@@ -31,8 +31,8 @@ export const postsData = [
         date: "28/01/2023",
         title: "Buscando um bom algoritmo de buscas",
         description: `No dia a dia é normal não conseguirmos encontrar coisas que precisamos, 
-        como o controle da TV que está na nossa mão ou os óculos que estão justamente onde deveriam estar
-        , ou seja, na frente dos nossos olhos. Isso é normal, e apesar do inconveniente momentâneo, 
+        como o controle da TV que está na nossa mão ou os óculos que estão justamente onde deveriam estar, 
+        ou seja, na frente dos nossos olhos. Isso é normal, e apesar do inconveniente momentâneo, 
         não gera grandes transtornos e às vezes até rende boas risadas.`,
         platform: "Medium",
     },

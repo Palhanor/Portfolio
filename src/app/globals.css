@@ -1,4 +1,37 @@
 @tailwind base;
+
+/* GENERAL */
+
+.my-section {
+  @apply mt-[6vh] mb-[10vh] mx-[5vw];
+}
+
+.my-section-title {
+  @apply mb-7 text-3xl;
+}
+
+.my-date {
+  @apply text-lightgray my-1 text-sm;
+}
+
+.my-tag {
+  @apply text-sm inline-block rounded-md py-1 px-2;
+}
+
+/* SPECIFIC */
+
+.my-header-navbar {
+  @apply bg-lightblue h-[10vh] pr-10 pl-10 flex items-center justify-between fixed top-0 z-10 w-full;
+}
+
+.my-about-badges {
+  @apply bg-background bg-cover bg-center bg-no-repeat rounded-xl p-1 mt-8 h-20;
+}
+
+.my-post-button {
+  @apply mt-5 py-4 px-10 rounded-md text-white block m-auto;
+}
+
 @tailwind components;
 @tailwind utilities;
 
@@ -10,6 +43,7 @@
   scroll-behavior: smooth;
 }
 
+/* Adicionar no layout.tsx */
 body {
   background-color: #f1f5f6;
 }

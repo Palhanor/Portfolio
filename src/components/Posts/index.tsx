@@ -5,8 +5,9 @@
 //  https://stackoverflow.com/questions/36097527/how-to-retrieve-medium-stories-for-a-user-from-the-api
 // TODO: Criar um mecanismo de busca entre os posts, ou filtro entre as linguagens e plataformas (por exemplo)
 
-import { postsData } from "@/data/posts";
 import React, { useEffect, useState } from "react";
+import { postsData } from "@/data/posts";
+import { textPreview } from "@/utils/textPreview";
 
 export default function Posts() {
   const [posts, setPosts] = useState<any>([]);
@@ -15,10 +16,6 @@ export default function Posts() {
   useEffect(() => {
     loadNewPosts();
   }, []);
-
-  const truncateText = (text: string) => {
-    return text.slice(0, 280).trim() + "...";
-  };
 
   const loadNewPosts = () => {
     const numPosts = 3;
@@ -35,21 +32,20 @@ export default function Posts() {
   };
 
   const styleSheet = {
-    container: "mt-6vh mb-10vh ml-5vw mr-5vw",
-    sectionTitle: "mb-7 text-3xl",
-    post: "w-full bg-white rounded-lg mb-8  ease-in-out duration-200 hover:scale-[1.005] hover:shadow-md",
+    container: "my-section",
+    sectionTitle: "my-section-title",
+    post: "w-full bg-white rounded-lg mb-8  ease-in-out duration-200 hover:shadow-md",
     postUrl: "flex justify-between max-h-[22vh]",
     postImg: "w-1/3 rounded-l-lg object-cover",
-    postContent: "pt-6 pr-10 pb-6 pl-8 w-full",
-    postDate: "text-lightgray mt-1 mb-1 text-sm",
+    postContent: "py-6 pr-10 pl-8 w-full",
+    postDate: "my-date",
     postTitle: "text-lg mb-2",
     postDescription: "mb-2 text-mediumgray",
-    postTag: "bg-darkenlightblue text-sm inline-block rounded-sm p-1",
+    postTag: "my-tag bg-slate-200",
     button: () => {
-      const baseStyle =
-        "mt-5 pt-4 pb-4 pl-10 pr-10 rounded-md text-white block m-auto";
-      if (morePosts) return `${baseStyle} bg-sky-600 hover:bg-sky-700`;
-      else return `${baseStyle} bg-zinc-500`;
+      return morePosts
+        ? "my-post-button bg-sky-600 hover:bg-sky-700"
+        : "my-post-button bg-gray-400 cursor-not-allowed";
     },
   };
 
@@ -68,7 +64,7 @@ export default function Posts() {
               <div className={styleSheet.postDate}>{post.date}</div>
               <h3 className={styleSheet.postTitle}>{post.title}</h3>
               <p className={styleSheet.postDescription}>
-                {truncateText(post.description)}
+                {textPreview(post.description, 280)}
               </p>
               <span className={styleSheet.postTag}>{post.platform}</span>
             </div>

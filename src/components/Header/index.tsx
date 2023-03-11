@@ -20,15 +20,12 @@ export default function Header() {
 
   const styleSheet = {
     navbar: (scroll: number) => {
-      const baseStyle =
-        "bg-lightblue h-10vh pr-10 pl-10 flex items-center justify-between fixed top-0 z-10 w-full";
-      if (scroll == 0) return baseStyle;
-      else return `${baseStyle} shadow-md`;
+      return scroll == 0 ? "my-header-navbar" : "my-header-navbar shadow-md";
     },
-    listItems: "flex justify-around w-20vw list-none text-xl",
+    listItems: "flex justify-around w-[20vw] list-none text-xl",
     item: "cursor-pointer",
-    logo: "h-5vh cursor-pointer",
-    listSocial: "flex justify-end w-20vw list-none text-xl",
+    logo: "h-[5vh] cursor-pointer",
+    listSocial: "flex justify-end w-[20vw] list-none text-xl",
     social: "ml-7",
     socialImg: "w-10 h-10",
   };

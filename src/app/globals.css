@@ -11,7 +11,7 @@
 }
 
 .my-date {
-  @apply text-lightgray my-1 text-sm;
+  @apply text-gray-500 my-1 text-sm;
 }
 
 .my-tag {
@@ -26,10 +26,22 @@
   @apply text-base text-gray-600;
 }
 
+.my-filter-container {
+  @apply mb-6 w-full flex justify-between items-center;
+}
+
+.my-filter-input {
+  @apply w-[90%] p-4 rounded-md outline-none shadow-sm border-solid border border-gray-200;
+}
+
+.my-filter-select {
+  @apply w-[8%] p-4 rounded-md shadow-sm bg-white border-solid border border-gray-200;
+}
+
 /* SPECIFIC */
 
 .my-header-navbar {
-  @apply hidden lg:bg-lightblue lg:h-[10vh] lg:px-10 lg:flex lg:items-center lg:justify-between lg:fixed lg:top-0 lg:z-10 lg:w-full;
+  @apply hidden lg:bg-slate-100 lg:h-[10vh] lg:px-10 lg:flex lg:items-center lg:justify-between lg:fixed lg:top-0 lg:z-10 lg:w-full;
 }
 
 .my-post-button {
@@ -39,17 +51,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Adicionar no layout.tsx */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /* font-family: "Proza Libre", sans-serif; */
   scroll-behavior: smooth;
-}
-
-/* Adicionar no layout.tsx */
-body {
-  background-color: #f1f5f6;
 }
 
 ::-webkit-scrollbar {

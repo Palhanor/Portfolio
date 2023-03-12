@@ -9,7 +9,7 @@ export const postsData = [
          usando apenas dígitos do teclado, ao clássico estilo Matrix. Este estilo de desenho digital é chamado de ASCII Art, 
          e pesquisando um pouco sobre este assunto eu percebi que seria possível desenvolver um algoritmo de geração 
          de imagens e vídeos neste estilo.`,
-        tags: ["Python", "Ascii", "Art", "OpenCV", "Imagens"],
+        tags: ["Python", "Ascii", "OpenCV", "Imagem"],
     },
     {
         id: 4,
@@ -22,7 +22,7 @@ export const postsData = [
         que sistemas devem ser desenvolvidos para resolver problemas, e não criá-los. 
         Contudo, em muitas ocasiões pensamos pouco sobre a qualidade do nosso ambiente de desenvolvimento, 
         assim como a facilidade ou dificuldade de codificar com uma determinada linguagem, framework ou arquitetura de projeto.`,
-        tags: ["Java", "Python", "DX", "Zen"],
+        tags: ["Java", "Python"],
     },
     {
         id: 3,
@@ -34,7 +34,7 @@ export const postsData = [
         como o controle da TV que está na nossa mão ou os óculos que estão justamente onde deveriam estar, 
         ou seja, na frente dos nossos olhos. Isso é normal, e apesar do inconveniente momentâneo, 
         não gera grandes transtornos e às vezes até rende boas risadas.`,
-        tags: ["Python", "Algoritmos", "Busca"],
+        tags: ["Python", "Algoritmo", "Busca"],
     },
     {
         id: 2,
@@ -51,7 +51,7 @@ export const postsData = [
         vício está me impedindo de alcançar meu pleno potencial e de viver uma 
         vida autônoma e independente. Por isso, é necessário lutar para que minha 
         vida seja plena novamente.`,
-        tags: ["IA", "Futuro", "Dependencia", "Tecnologia"],
+        tags: ["IA", "Futuro", "Tecnologia"],
     },
     {
         id: 1,
@@ -64,6 +64,6 @@ export const postsData = [
         a Mega da Virada está com um prêmio de R$ 500.000.000,00 o que pode 
         ser lido como meio bilhão de reais, ou a primeira parcela do iPhone 
         15 que será lançado em 2023.`,
-        tags: ["Python", "Script"],
+        tags: ["Python"],
     },
 ]

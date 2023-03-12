@@ -7,24 +7,23 @@ const colorTag = (tagName: string) => {
         case "typescript":
         case "react":
         case "reactnative":
-            return "bg-sky-400";
-        case "html5":
-        case "git":
-            return "bg-orange-400";
+            return "bg-sky-200";
         case "nextjs":
         case "github":
-            return "bg-gray-400";
+        case "expo":
+            return "bg-gray-200";
+        case "html5":
+        case "git":
+            return "bg-orange-200";
         case "javascript":
         case "python":
-            return "bg-yellow-300";
+            return "bg-yellow-200";
         case "sass":
-            return "bg-pink-300";
+            return "bg-pink-200";
         case "bootstrap":
-            return "bg-violet-400";
-        case "tailwindscss":
-            return "bg-teal-400";
-        case "expo":
-            return "bg-slate-200";
+            return "bg-violet-200";
+        case "tailwindcss":
+            return "bg-teal-200";
     }
 }
 

@@ -58,7 +58,7 @@ export const projectsData = [
     about: `Website pessoal criado como uma vitrine profissional própria,
       contendo informações relevantes acerca de minha trajetória,
       motivações e projetos realizados ao longo do tempo.`,
-    tech: ["NextJS", "TypeScript", "TailwindsCSS"],
+    tech: ["NextJS", "TypeScript", "TailwindCSS"],
     // links: [
     //     {
     //         name: "Github",

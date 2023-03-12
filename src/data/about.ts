@@ -21,7 +21,7 @@ export const skillsData = [
         title: "Bibliotecas e Frameworks",
         value: "frameworks",
         items: [
-            "SASS", "React", "React Native", "Bootstrap", "TailwindsCSS", "NextJS", "Expo"
+            "SASS", "React", "React Native", "Bootstrap", "TailwindCSS", "NextJS", "Expo"
         ]
     },
     {

@@ -1,6 +1,3 @@
-// TODO: Aplicar o tilt dentro do card principal (?)
-// TODO: Adicionar um sistema de voltar para o topo (que acompanha a rolagem)
-
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
@@ -16,7 +13,6 @@ export default function Banner() {
       count.current += 1;
       setSrc(() => bannerGifs[count.current % bannerGifs.length]);
     }, 1000);
-
     return () => clearTimeout(timer);
   }, [count, src]);
 
@@ -46,7 +42,7 @@ export default function Banner() {
         </div>
         <img src={src} alt="Ilustrações" className={styleSheet.ilustracoes} />
       </div>
-      <div className={styleSheet.scrollDown} onClick={gotoAbout}>
+      <div id="sobre" className={styleSheet.scrollDown} onClick={gotoAbout}>
         <FaChevronDown size={35} color="#FFF" />
       </div>
     </main>

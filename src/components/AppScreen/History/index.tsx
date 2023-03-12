@@ -18,7 +18,7 @@ export default function History() {
   };
 
   return (
-    <section id="historico" className={styleSheet.container}>
+    <section className={styleSheet.container}>
       <h2 className={styleSheet.sectionTitle}>Histórico</h2>
       <div className={styleSheet.leftBorder}>
         <ul className={styleSheet.historyContainer}>

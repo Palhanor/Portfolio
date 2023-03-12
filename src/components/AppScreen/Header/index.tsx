@@ -24,6 +24,10 @@ export default function Header() {
     });
   };
 
+  const gotoTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   const styleSheet = {
     navbar: (scroll: number) => {
       return scroll == 0 ? "my-header-navbar" : "my-header-navbar shadow-md";
@@ -49,7 +53,12 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <img src="/logo_preta.png" alt="Logo" className={styleSheet.logo} />
+        <img
+          src="/logo_preta.png"
+          alt="Logo"
+          className={styleSheet.logo}
+          onClick={gotoTop}
+        />
         <ul className={styleSheet.listSocial}>
           <li className={styleSheet.social}>
             <Link

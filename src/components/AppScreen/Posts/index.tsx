@@ -1,13 +1,13 @@
-"use client";
-
-// TODO: Criar sistema de busca (titulo ou descricao) e filtro (hashtags) entre os posts
 // TODO: Consumir a API do Medium para carregar os artigos (isso vai ser bem complicado pelo visto...)
 //  https://medium.com/feed/@lucaspalhanof
 //  https://stackoverflow.com/questions/36097527/how-to-retrieve-medium-stories-for-a-user-from-the-api
 
+"use client";
+
 import React, { useEffect, useState } from "react";
 import { postsData } from "@/data/posts";
 import { textPreview } from "@/utils/textPreview";
+import Filters from "@/components/common/Filters";
 
 export default function Posts() {
   const [posts, setPosts] = useState<any>([]);
@@ -52,6 +52,7 @@ export default function Posts() {
   return (
     <section id="artigos" className={styleSheet.container}>
       <h2 className={styleSheet.sectionTitle}>Artigos</h2>
+      <Filters placeholder="Faça uma busca por entre os artigos!" />
       {posts.map((post: any) => (
         <article key={post.id} className={styleSheet.post}>
           <a href={post.url} target="_blank" className={styleSheet.postUrl}>

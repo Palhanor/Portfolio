@@ -13,7 +13,7 @@ export default function About() {
     download:
       "mt-4 py-3 px-8 rounded-md text-white bg-red-600 hover:bg-red-700",
     skills: "w-2/6",
-    skillsContainer: "w-full h-auto bg-white shadow-md rounded-xl py-4 px-7",
+    skillsContainer: "w-full h-auto bg-white shadow-md rounded-xl py-4 px-7 -mt-10",
     skillsTitle: "my-content-title text-xl text-center mb-3",
     skillsArea: "my-content-title text-md mb-3 mt-2 cursor-pointer",
     skillTag: (tech: string) =>
@@ -21,14 +21,16 @@ export default function About() {
   };
 
   return (
-    <section id="sobre" className={styleSheet.container}>
+    <section className={styleSheet.container}>
       <h2 className={styleSheet.title}>Sobre</h2>
       <div className={styleSheet.content}>
         <article className={styleSheet.textContainer}>
           <p className={styleSheet.paragraph}>{aboutData.p1}</p>
           <p className={styleSheet.paragraph}>{aboutData.p2}</p>
           <Link href="/cv/Curriculo.pdf" download="Curriculo">
-            <button className={styleSheet.download}>Baixar CV!</button>
+            <button id="historico" className={styleSheet.download}>
+              Baixar CV!
+            </button>
           </Link>
         </article>
         <aside className={styleSheet.skills}>

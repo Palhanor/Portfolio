@@ -1,5 +1,4 @@
-// TODO: Criar sistema de busca (titulo ou descricao) e filtro (tecnololgias) entre os projetos
-
+import Filters from "@/components/common/Filters";
 import { projectsData } from "@/data/projects";
 import colorTag from "@/utils/colorTag";
 import Link from "next/link";
@@ -9,7 +8,7 @@ export default function Projects() {
   const styleSheet = {
     section: "my-section",
     sectionTitle: "my-section-title",
-    projectList: "grid grid-cols-2 gap-5 mt-5",
+    projectList: "grid grid-cols-2 gap-5",
     project:
       "relative bg-white bg-cover bg-no-repeat bg-center min-h-[42vh] shadow-md rounded-lg cursor-pointer px-2 pt-2 pb-7 ease-in-out duration-100 hover:shadow-lg",
     banner: "max-h-[25vh] rounded-md w-full object-cover object-top",
@@ -23,6 +22,7 @@ export default function Projects() {
   return (
     <section id="projetos" className={styleSheet.section}>
       <h2 className={styleSheet.sectionTitle}>Projetos</h2>
+      <Filters placeholder="Realize uma busca entre os projetos!" />
       <ul className={styleSheet.projectList}>
         {projectsData.map((project) => (
           <Link

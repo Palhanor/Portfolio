@@ -16,7 +16,6 @@ module.exports = {
         dynos: "url('/projects/dynos/banner.png')",
         portfolio: "url('/projects/portfolio/banner.png')",
         "qr-key": "url('/projects/qr-key/banner.png')",
-        down: "url('/down.png')",
       },
     },
   },

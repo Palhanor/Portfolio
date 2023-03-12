@@ -1,5 +1,5 @@
-// TODO: Inserir o endereco de e-mail dentro desta area
-// TODO: Enviar a mensagem para mim mesmo em um outro e-mail
+// TODO: Inserir o endereco de e-mail dentro desta area (deixar mais explicito que no rodapé)
+// TODO: Enviar a mensagem para mim mesmo em um outro e-mail (e minha segurança com a comunicação anonima de outras pessoas?)
 
 import React from "react";
 

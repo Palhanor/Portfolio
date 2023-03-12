@@ -1,79 +1,34 @@
 export const aboutData = {
-    title: "Sobre",
-    p1: `Eu me chamo Lucas Palhano e sou apaixonado por programação. Tenho como
-    objetivo contribuir com a construção de um futuro melhor, buscando
-    solucionar problemas através da tecnologia de inovação.`,
-    p2: `Atualmente cursando Análise de Desenvolvimento de Sistemas, com
-    objetivo em atuar enquanto desenvolvedor Full-stack. Contudo, tenho
-    também interesse em diversas outras áreas, tais como Mobile e Data
-    Science.`,
+    p1: `Eu me chamo Lucas Palhano Fonseca e sou apaixonado por programação e tecnologia. 
+    Meu objetivo pessoal é contribuir com a construção de um futuro melhor através de soluções 
+    inovadoras voltadas para a resolução de problemas comuns a todos nós. Ao longo desta jornada, 
+    espero me tornar um profissional e um ser humano melhor a cada dia!`,
+    p2: `Estou cursando Análise de Desenvolvimento de Sistemas, e atualmente tenho sólidos conhecimentos 
+    em tecnologias Front-end, como: HTML5, CSS3, JavaScript (ES6+), TypeScript, React e NextJs. Ainda, estou 
+    estudando conteúdos voltado para desenvolvimento Back-end, como: Python, NodeJS, Java e SQL. Meu principal 
+    objetivo é alcançar o nível de Full-stack, mas acima de tudo, busco sempre ser um resolvedor de problemas!`,
 }
 
-export const badgesData = [
+export const skillsData = [
     {
         title: "Linguagens",
         value: "linguagens",
         items: [
-            {
-                imgSrc: "https://cdn-icons-png.flaticon.com/512/1051/1051277.png",
-                label: "HTML5",
-            },
-            {
-                imgSrc: "https://cdn-icons-png.flaticon.com/512/732/732190.png",
-                label: "CSS3",
-            },
-            {
-                imgSrc: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
-                label: "JavaScript",
-            },
-            {
-                imgSrc: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
-                label: "TypeScript",
-            },
-            {
-                imgSrc: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png",
-                label: "Python",
-            },
+            "HTML5", "CSS3", "JavaScript", "TypeScript", "Python"
         ]
     },
     {
         title: "Bibliotecas e Frameworks",
         value: "frameworks",
         items: [
-            {
-                imgSrc: "https://cdn-icons-png.flaticon.com/512/5968/5968358.png",
-                label: "SASS",
-            },
-            {
-                imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
-                label: "React",
-            },
-            {
-                imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
-                label: "React Native",
-            },
-            {
-                imgSrc: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png",
-                label: "Bootstrap",
-            },
+            "SASS", "React", "React Native", "Bootstrap", "TailwindsCSS", "NextJS", "Expo"
         ]
     },
     {
         title: "Ferramentas",
         value: "ferramentas",
         items: [
-            {
-                imgSrc: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
-                label: "GIT",
-            },
-            {
-                imgSrc: "https://cdn-icons-png.flaticon.com/512/5968/5968866.png",
-                label: "GitHub",
-            },
-            {
-                imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png",
-                label: "VS Code",
-            },
+            "GIT", "GitHub", "VS Code"
         ]
     },
 ];

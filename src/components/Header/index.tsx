@@ -1,10 +1,9 @@
-// TODO: Adicionar o Medium entre as redes sociais
-
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { headerNav, headerSocial } from "@/data/header";
+import { headerNav } from "@/data/header";
 import Link from "next/link";
+import { FaGithubSquare, FaLinkedin, FaMedium } from "react-icons/fa";
 
 export default function Header() {
   const [scroll, setScroll] = useState<number>(0);
@@ -18,6 +17,13 @@ export default function Header() {
     setScroll(() => window.scrollY);
   };
 
+  const scrollPage = (section: string) => {
+    const elem = document.getElementById(section);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   const styleSheet = {
     navbar: (scroll: number) => {
       return scroll == 0 ? "my-header-navbar" : "my-header-navbar shadow-md";
@@ -26,8 +32,7 @@ export default function Header() {
     item: "cursor-pointer",
     logo: "h-[5vh] cursor-pointer",
     listSocial: "flex justify-end w-[20vw] list-none text-xl",
-    social: "ml-7",
-    socialImg: "w-10 h-10",
+    social: "ml-5",
   };
 
   return (
@@ -35,24 +40,35 @@ export default function Header() {
       <nav className={styleSheet.navbar(scroll)}>
         <ul className={styleSheet.listItems}>
           {headerNav.map((item) => (
-            <li key={item} className={styleSheet.item}>
-              {item}
+            <li
+              key={item.id}
+              className={styleSheet.item}
+              onClick={() => scrollPage(item.id)}
+            >
+              {item.title}
             </li>
           ))}
         </ul>
         <img src="/logo_preta.png" alt="Logo" className={styleSheet.logo} />
         <ul className={styleSheet.listSocial}>
-          {headerSocial.map((social) => (
-            <li key={social.imgAlt} className={styleSheet.social}>
-              <Link href={social.url} target="_blank">
-                <img
-                  src={social.imgSrc}
-                  alt={social.imgAlt}
-                  className={styleSheet.socialImg}
-                />
-              </Link>
-            </li>
-          ))}
+          <li className={styleSheet.social}>
+            <Link
+              href="https://www.linkedin.com/in/lucaspalhano"
+              target="_blank"
+            >
+              <FaLinkedin size={42} />
+            </Link>
+          </li>
+          <li className={styleSheet.social}>
+            <Link href="https://github.com/Palhanor" target="_blank">
+              <FaGithubSquare size={42} />
+            </Link>
+          </li>
+          <li className={styleSheet.social}>
+            <Link href="https://medium.com/@lucaspalhanof" target="_blank">
+              <FaMedium size={42} />
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

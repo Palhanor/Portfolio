@@ -1,9 +1,9 @@
 "use client";
 
-// TODO: Consumir a API do Medium para carregar os artigos
+// TODO: Criar sistema de busca (titulo ou descricao) e filtro (hashtags) entre os posts
+// TODO: Consumir a API do Medium para carregar os artigos (isso vai ser bem complicado pelo visto...)
 //  https://medium.com/feed/@lucaspalhanof
 //  https://stackoverflow.com/questions/36097527/how-to-retrieve-medium-stories-for-a-user-from-the-api
-// TODO: Criar um mecanismo de busca entre os posts, ou filtro entre as linguagens e plataformas (por exemplo)
 
 import React, { useEffect, useState } from "react";
 import { postsData } from "@/data/posts";
@@ -39,9 +39,9 @@ export default function Posts() {
     postImg: "w-1/3 rounded-l-lg object-cover",
     postContent: "py-6 pr-10 pl-8 w-full",
     postDate: "my-date",
-    postTitle: "text-lg mb-2",
-    postDescription: "mb-2 text-mediumgray",
-    postTag: "my-tag bg-slate-200",
+    postTitle: "my-content-title text-lg",
+    postDescription: "my-content-text mb-4",
+    postTag: "my-tag bg-slate-200 mr-3",
     button: () => {
       return morePosts
         ? "my-post-button bg-sky-600 hover:bg-sky-700"
@@ -66,7 +66,11 @@ export default function Posts() {
               <p className={styleSheet.postDescription}>
                 {textPreview(post.description, 280)}
               </p>
-              <span className={styleSheet.postTag}>{post.platform}</span>
+              {post.tags.map((tag: string) => (
+                <span key={tag} className={styleSheet.postTag}>
+                  #{tag.toLowerCase()}
+                </span>
+              ))}
             </div>
           </a>
         </article>

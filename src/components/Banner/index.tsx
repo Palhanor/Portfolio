@@ -1,11 +1,11 @@
-// TODO: Aplicar o tilt dentro do card principal
-// TODO: Implementar o sistema de rolagem para baixo
-// TODO: Adicionar um sistema de voltar para o topo
+// TODO: Aplicar o tilt dentro do card principal (?)
+// TODO: Adicionar um sistema de voltar para o topo (que acompanha a rolagem)
 
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
 import { bannerData, bannerGifs } from "@/data/banner";
+import { FaChevronDown } from "react-icons/fa";
 
 export default function Banner() {
   const count = useRef<number>(0);
@@ -20,15 +20,21 @@ export default function Banner() {
     return () => clearTimeout(timer);
   }, [count, src]);
 
+  const gotoAbout = () => {
+    document.getElementById("sobre")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   const styleSheet = {
-    card: "box-border bg-background bg-cover bg-no-repeat bg-center w-[95vw] h-[85vh] flex justify-between items-center flex-col rounded-3xl cursor-pointer m-auto mt-[11vh] pt-[20vh] pr-[12vw] pb-[6vh] pl-[8vw]",
+    card: "h-screen w-full box-border bg-background bg-cover bg-no-repeat bg-center lg:w-[95vw] lg:h-[85vh] flex justify-between items-center flex-col lg:rounded-3xl cursor-pointer lg:m-auto lg:mt-[11vh] pt-[20vh] pr-[12vw] pb-[6vh] pl-[8vw]",
     content: "flex justify-between items-center flex-row w-full h-auto",
     textContainer:
       "w-[50vw] h-[40vh] p-3 flex justify-center items-start flex-col",
     title: "text-4xl text-white font-semibold",
     subtitle: "text-3xl text-white mt-5",
     ilustracoes: "max-w-[20vw] max-h-[30vh]",
-    scrollDown: "h-7 w-9 bg-down bg-cover bg-no-repeat bg-center",
+    scrollDown: "h-7 w-9",
   };
 
   return (
@@ -40,7 +46,9 @@ export default function Banner() {
         </div>
         <img src={src} alt="Ilustrações" className={styleSheet.ilustracoes} />
       </div>
-      <div className={styleSheet.scrollDown}></div>
+      <div className={styleSheet.scrollDown} onClick={gotoAbout}>
+        <FaChevronDown size={35} color="#FFF" />
+      </div>
     </main>
   );
 }

@@ -1,1 +1,0 @@
-export type badges = "" | "linguagens" | "frameworks" | "ferramentas";

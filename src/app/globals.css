@@ -60,6 +60,12 @@
   scroll-behavior: smooth;
 }
 
+/* .teste {
+  background: linear-gradient(217deg, hsl(48, 50%, 70%), rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, hsl(306, 50%, 70%), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, hsl(174, 50%, 70%), rgba(0, 0, 255, 0) 70.71%);
+} */
+
 ::-webkit-scrollbar {
   width: 8px;
 }

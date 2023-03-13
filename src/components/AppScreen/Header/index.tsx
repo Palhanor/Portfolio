@@ -1,21 +1,14 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { headerNav } from "@/data/header";
 import Link from "next/link";
 import { FaGithubSquare, FaLinkedin, FaMedium } from "react-icons/fa";
+import useScroll from "./hooks/useScroll";
+import { style } from "./style";
 
 export default function Header() {
-  const [scroll, setScroll] = useState<number>(0);
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeScroll);
-    return () => window.removeEventListener("scroll", changeScroll);
-  });
-
-  const changeScroll = () => {
-    setScroll(() => window.scrollY);
-  };
+  const { scroll } = useScroll();
 
   const scrollPage = (section: string) => {
     const elem = document.getElementById(section);
@@ -28,25 +21,14 @@ export default function Header() {
     window.scrollTo(0, 0);
   };
 
-  const styleSheet = {
-    navbar: (scroll: number) => {
-      return scroll == 0 ? "my-header-navbar" : "my-header-navbar shadow-md";
-    },
-    listItems: "flex justify-around w-[20vw] list-none text-xl",
-    item: "cursor-pointer",
-    logo: "h-[5vh] cursor-pointer",
-    listSocial: "flex justify-end w-[20vw] list-none text-xl",
-    social: "ml-5",
-  };
-
   return (
     <header>
-      <nav className={styleSheet.navbar(scroll)}>
-        <ul className={styleSheet.listItems}>
+      <nav className={style.navbar(scroll)}>
+        <ul className={style.listItems}>
           {headerNav.map((item) => (
             <li
               key={item.id}
-              className={styleSheet.item}
+              className={style.item}
               onClick={() => scrollPage(item.id)}
             >
               {item.title}
@@ -56,11 +38,11 @@ export default function Header() {
         <img
           src="/logo_preta.png"
           alt="Logo"
-          className={styleSheet.logo}
+          className={style.logo}
           onClick={gotoTop}
         />
-        <ul className={styleSheet.listSocial}>
-          <li className={styleSheet.social}>
+        <ul className={style.listSocial}>
+          <li className={style.social}>
             <Link
               href="https://www.linkedin.com/in/lucaspalhano"
               target="_blank"
@@ -68,12 +50,12 @@ export default function Header() {
               <FaLinkedin size={42} />
             </Link>
           </li>
-          <li className={styleSheet.social}>
+          <li className={style.social}>
             <Link href="https://github.com/Palhanor" target="_blank">
               <FaGithubSquare size={42} />
             </Link>
           </li>
-          <li className={styleSheet.social}>
+          <li className={style.social}>
             <Link href="https://medium.com/@lucaspalhanof" target="_blank">
               <FaMedium size={42} />
             </Link>

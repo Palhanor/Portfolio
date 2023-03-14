@@ -1,3 +1,4 @@
 export const textPreview = (text: string, width: number) => {
-    return text.slice(0, Math.round(width/3)).trim() + "...";
+    const numChars = width < 1000 ? width / 3 : width / 5
+    return text.slice(0, Math.round(numChars)).trim() + "...";
 }

@@ -1,3 +1,3 @@
-export const textPreview = (text: string, chars: number) => {
-    return text.slice(0, chars).trim() + "...";
+export const textPreview = (text: string, width: number) => {
+    return text.slice(0, Math.round(width/3)).trim() + "...";
 }

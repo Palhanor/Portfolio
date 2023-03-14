@@ -27,7 +27,7 @@ export default function Banner() {
         <img src={src} alt="Ilustrações" className={style.ilustracoes} />
       </div>
       <div id="sobre" className={style.scrollDown} onClick={gotoAbout}>
-        <FaChevronDown size={35} color="#FFF" />
+        <FaChevronDown size={40} color="#FFF" />
       </div>
     </main>
   );

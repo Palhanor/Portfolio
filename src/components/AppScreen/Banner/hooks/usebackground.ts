@@ -12,7 +12,7 @@ export default function useBackground() {
             position.current = position.current < 360 ? position.current + 1 : 0;
             color.current = color.current < 360 ? color.current + 1 : 0;
             configureBackgroundColor(position.current, color.current);
-        }, 30);
+        }, 20);
         return () => clearTimeout(timer);
     }, [background]);
 

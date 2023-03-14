@@ -27,21 +27,21 @@
 }
 
 .my-filter-container {
-  @apply mb-6 w-full flex justify-between items-center;
+  @apply mb-6 w-full flex justify-between;
 }
 
 .my-filter-input {
-  @apply w-[90%] p-4 rounded-md outline-none shadow-sm border-solid border border-gray-200;
+  @apply w-8/12 lg:w-[90%] p-4 rounded-l-md lg:rounded-md outline-none shadow-sm border-solid border-r-0 border border-gray-200;
 }
 
 .my-filter-select {
-  @apply w-[8%] p-4 rounded-md shadow-sm bg-white border-solid border border-gray-200;
+  @apply w-4/12 lg:w-[8%] p-4 rounded-r-md lg:rounded-md shadow-sm bg-white border-solid border border-gray-200;
 }
 
 /* SPECIFIC */
 
 .my-header-navbar {
-  @apply hidden lg:bg-slate-100 lg:h-[10vh] lg:px-10 lg:flex lg:items-center lg:justify-between lg:fixed lg:top-0 lg:z-10 lg:w-full;
+  @apply hidden lg:bg-slate-100 lg:h-[13vh] 2xl:h-[10vh] lg:px-10 lg:flex lg:items-center lg:justify-between lg:fixed lg:top-0 lg:z-10 lg:w-full;
 }
 
 .my-post-button {

@@ -36,7 +36,7 @@ export default function Header() {
           ))}
         </ul>
         <img
-          src="/logo_preta.png"
+          src="/logo.png"
           alt="Logo"
           className={style.logo}
           onClick={gotoTop}

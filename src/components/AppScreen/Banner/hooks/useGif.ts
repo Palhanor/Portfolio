@@ -3,7 +3,7 @@ import { bannerGifs } from '@/data/banner';
 
 export default function useGif() {
     const count = useRef<number>(0);
-    const [src, setSrc] = useState<string>("/html.webp");
+    const [src, setSrc] = useState<string>("/gifs/html.webp");
 
     useEffect(() => {
         const timer = setTimeout(() => {

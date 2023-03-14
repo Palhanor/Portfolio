@@ -4,11 +4,11 @@ export const bannerData = {
 }
 
 export const bannerGifs = [
-    "/html.webp",
-    "/css.webp",
-    "/js.webp",
-    "/react.webp",
-    "/vscode.webp",
-    "/git.webp",
-    "/python.webp",
+    "/gifs/html.webp",
+    "/gifs/css.webp",
+    "/gifs/js.webp",
+    "/gifs/react.webp",
+    "/gifs/vscode.webp",
+    "/gifs/git.webp",
+    "/gifs/python.webp",
 ]

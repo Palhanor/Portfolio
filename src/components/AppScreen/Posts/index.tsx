@@ -76,7 +76,7 @@ export default function Posts() {
               <div className={style.postDate}>{post.date}</div>
               <h3 className={style.postTitle}>{post.title}</h3>
               <p className={style.postDescription}>
-                {textPreview(post.description, 280)}
+                {textPreview(post.description, window.innerWidth)}
               </p>
               {post.tags.map((tag: string) => (
                 <span key={tag} className={style.postTag}>

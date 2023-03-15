@@ -23,13 +23,19 @@ Para além das tecnologias previamente descritas, o projeto foi elaborado atrav�
 - [x] Criar Hooks personalizados para abstrair complexidades locais
 - [x] Adicionar mais projetos pessoais: Searchin, Splittyn, Pokedex...
 - [x] Fazer os ajustes para a versão mobile do sistema
-- [ ] Fazer deploy através da Vercel
----
+- [x] Fazer deploy através da Vercel
+- [x] Pegar os Readmes para exibir dentro das páginas dos proejtos
+- [x] Finalizar o componente do Readme, aplicando a renderização de Markdown
+- [ ] Pegar os dados pela API do GitHub para exibir dentro das páginas dos proejtos (linguas, descricao, homepage, commits, criacao, modificacao...)
+- [ ] Adicionar coisas extra como videos, frameworks usados, libs, mais informações e afins
+- [ ] Adicionar estilizações especificas para cada projetos
 - [ ] Encontrar um lugar para colocar os contatos na versão mobile
 - [ ] Criar uma estrutura de API interna usando o pages/api
 - [ ] Usar o sistema de revalidate para dar um tempo de refras com a função fetch()
 - [ ] Tentar deixar a API privada (ver se é possível ou memso necessário...)
+
 ---
+
 - [ ] Criar uma página para cada projeto, ao menos uma página simples (personalizada)
 - [ ] Criar uma sistema modular para a busca e filtro (encapsular states, funções e estilo servindo tanto para posts quanto para projects)
 - [ ] Extrair mais funções parar arquivos externos, principalmente as reutilizadas

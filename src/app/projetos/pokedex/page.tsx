@@ -1,5 +1,10 @@
+import Readme from "@/components/Readme";
 import React from "react";
 
 export default function Pokedex() {
-  return <div>Pokedex</div>;
+  return (
+    <div>
+      <Readme />
+    </div>
+  );
 }

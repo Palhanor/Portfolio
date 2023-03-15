@@ -1,6 +1,11 @@
 // TODO: Consumir a API do Medium para carregar os artigos (isso vai ser bem complicado pelo visto...)
+//  https://www.youtube.com/watch?v=0gON4MUdJE8
 //  https://medium.com/feed/@lucaspalhanof
-//  https://stackoverflow.com/questions/36097527/how-to-retrieve-medium-stories-for-a-user-from-the-api
+//  Pega cada pos pela tag <item> => title, link, category[], pubDate e content:encoded
+//  Vai ser preciso parsear o content para pegar o src da primeira imagem (capa) e o texto do primeiro paragrafo (descricao)
+//  Depois disso deve ser possivel compor um blog dentro do meu próprio site, consumido diretamente pelo Medium
+
+// Uma alternativa menos root é usar o Rapid API: https://rapidapi.com/nishujain199719-vgIfuFHZxVZ/api/medium2  https://mediumapi.com/
 
 // TODO: Modificar para fazer um lazy load dentro do useEffect, pegando os 5 primeiro e depois de 5 segundos pegando o resto de uma so vez
 //  Depois disso, a funcao do botao eh so exibir de 5 em 5

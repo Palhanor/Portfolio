@@ -1,4 +1,4 @@
-export const postsData = [
+export const posts = [
     {
         id: 5,
         url: "https://medium.com/@lucaspalhanof/cria%C3%A7%C3%A3o-de-ascii-art-usando-python-7c4724491a9?source=rss-6a633f9d0fd7------2",

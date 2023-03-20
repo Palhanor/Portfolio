@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { projectsData } from "@/data/projects";
 import Link from "next/link";
 import useProjects from "./hooks/useProject";
 import { style } from "./style";
@@ -30,7 +29,7 @@ export default function Projects() {
 
   const techList = () => {
     const list: Set<string> = new Set();
-    projectsData.forEach((project) => {
+    projects.forEach((project) => {
       project.tech.forEach((tech) => {
         list.add(tech);
       });
@@ -62,7 +61,7 @@ export default function Projects() {
       <ul className={style.projectList}>
         {filteredProjects().map((project) => (
           <li key={project.id} id={project.id} className={style.project}>
-            <Link href={`/projetos/${project.id}`} target="_blank">
+            <Link href={`/projetos/${project.id}`}>
               <img
                 src={`/projects/${project.id}/banner.png`}
                 alt={`${project.name} banner`}
@@ -75,7 +74,7 @@ export default function Projects() {
               />
               <div className={style.content}>
                 <h3 className={style.title}>{project.name}</h3>
-                <p className={style.about}>{project.about}</p>
+                <p className={style.about}>{project.description}</p>
                 {project.tech.map((tech) => (
                   <span key={tech} className={style.tag(tech)}>
                     {tech}

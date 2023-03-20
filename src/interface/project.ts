@@ -1,6 +1,8 @@
 export interface project {
-    name: string;
     id: string;
-    about: string;
+    name: string;
+    description: string;
+    homepage: string;
+    repository: string;
     tech: string[];
 }

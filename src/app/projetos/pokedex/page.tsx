@@ -1,10 +1,6 @@
-import Readme from "@/components/Readme";
+import Readme from "@/components/ProjetoScreen";
 import React from "react";
 
 export default function Pokedex() {
-  return (
-    <div>
-      <Readme />
-    </div>
-  );
+  return <Readme />;
 }

@@ -26,7 +26,9 @@ Para além das tecnologias previamente descritas, o projeto foi elaborado atrav�
 - [x] Fazer deploy através da Vercel
 - [x] Pegar os Readmes para exibir dentro das páginas dos proejtos
 - [x] Finalizar o componente do Readme, aplicando a renderização de Markdown
-- [ ] Pegar os dados pela API do GitHub para exibir dentro das páginas dos proejtos (linguas, descricao, homepage, commits, criacao, modificacao...)
+- [x] Consumir a API do prório NextJS dentor dos componentes
+- [ ] Expandir os dados das APIs para tornar o sistema mais robusto
+- [ ] Acabar de organizar a tela de projetos (unificar o layout)
 - [ ] Adicionar coisas extra como videos, frameworks usados, libs, mais informações e afins
 - [ ] Adicionar estilizações especificas para cada projetos
 - [ ] Encontrar um lugar para colocar os contatos na versão mobile

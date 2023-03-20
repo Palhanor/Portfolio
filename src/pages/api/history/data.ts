@@ -1,4 +1,4 @@
-export const historyData = [
+export const history = [
     {
         year: "2022 - 2024",
         title: "Análise e Desenvolvimento de sistemas (Cruzeiro do Sul)",

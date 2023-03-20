@@ -1,9 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
-import { bannerGifs } from '@/data/banner';
 
 export default function useGif() {
     const count = useRef<number>(0);
     const [src, setSrc] = useState<string>("/gifs/html.webp");
+    const bannerGifs = [
+        "/gifs/html.webp",
+        "/gifs/css.webp",
+        "/gifs/js.webp",
+        "/gifs/react.webp",
+        "/gifs/vscode.webp",
+        "/gifs/git.webp",
+        "/gifs/python.webp",
+    ]
 
     useEffect(() => {
         const timer = setTimeout(() => {

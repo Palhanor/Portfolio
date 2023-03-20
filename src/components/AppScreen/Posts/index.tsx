@@ -4,8 +4,7 @@
 //  Pega cada pos pela tag <item> => title, link, category[], pubDate e content:encoded
 //  Vai ser preciso parsear o content para pegar o src da primeira imagem (capa) e o texto do primeiro paragrafo (descricao)
 //  Depois disso deve ser possivel compor um blog dentro do meu próprio site, consumido diretamente pelo Medium
-
-// Uma alternativa menos root é usar o Rapid API: https://rapidapi.com/nishujain199719-vgIfuFHZxVZ/api/medium2  https://mediumapi.com/
+//  Uma alternativa menos root é usar o Rapid API: https://rapidapi.com/nishujain199719-vgIfuFHZxVZ/api/medium2  https://mediumapi.com/
 
 // TODO: Modificar para fazer um lazy load dentro do useEffect, pegando os 5 primeiro e depois de 5 segundos pegando o resto de uma so vez
 //  Depois disso, a funcao do botao eh so exibir de 5 em 5
@@ -14,7 +13,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { postsData } from "@/data/posts";
 import { textPreview } from "@/utils/textPreview";
 import usePosts from "./hooks/usePosts";
 import { style } from "./style";
@@ -44,7 +42,7 @@ export default function Posts() {
 
   const tagsList = () => {
     const list: Set<string> = new Set();
-    postsData.forEach((post) => {
+    posts.forEach((post) => {
       post.tags.forEach((tag) => {
         list.add(tag);
       });

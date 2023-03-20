@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { headerNav } from "@/data/header";
 import Link from "next/link";
 import { FaGithubSquare, FaLinkedin, FaMedium } from "react-icons/fa";
 import useScroll from "./hooks/useScroll";
@@ -25,15 +24,18 @@ export default function Header() {
     <header>
       <nav className={style.navbar(scroll)}>
         <ul className={style.listItems}>
-          {headerNav.map((item) => (
-            <li
-              key={item.id}
-              className={style.item}
-              onClick={() => scrollPage(item.id)}
-            >
-              {item.title}
-            </li>
-          ))}
+          <li className={style.item} onClick={() => scrollPage("sobre")}>
+            Sobre
+          </li>
+          <li className={style.item} onClick={() => scrollPage("historico")}>
+            Projetos
+          </li>
+          <li className={style.item} onClick={() => scrollPage("projetos")}>
+            Histórico
+          </li>
+          <li className={style.item} onClick={() => scrollPage("artigos")}>
+            Artigo
+          </li>
         </ul>
         <img
           src="/logo.png"

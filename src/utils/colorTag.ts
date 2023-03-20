@@ -1,4 +1,4 @@
-// Axios, Java, Spring Boot, NodeJS, Flask, Django, PyCharm, Styled Components, IntelliJ...
+// Axios, Java, Spring Boot, NodeJS, Flask, Django, Styled Components, IntelliJ, MySQL, PostgreSQL, MongoDB, Express...
 
 const colorTag = (tagName: string) => {
     switch (tagName.toLocaleLowerCase().replaceAll(" ", "")) {
@@ -11,12 +11,14 @@ const colorTag = (tagName: string) => {
         case "nextjs":
         case "github":
         case "expo":
+        case "markdown":
             return "bg-gray-200";
         case "html5":
         case "git":
             return "bg-orange-200";
         case "javascript":
         case "python":
+        case "pycharm":
             return "bg-yellow-200";
         case "sass":
             return "bg-pink-200";

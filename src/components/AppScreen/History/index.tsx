@@ -1,14 +1,18 @@
-import { historyData } from "@/data/history";
+"use client";
+
 import React from "react";
+import useHistory from "./hooks/useHistory";
 import { style } from "./style";
 
 export default function History() {
+  const { history } = useHistory();
+
   return (
     <section className={style.container}>
       <h2 className={style.sectionTitle}>Histórico</h2>
       <div className={style.leftBorder}>
         <ul className={style.historyContainer}>
-          {historyData.map((step) => (
+          {history.map((step) => (
             <li key={step.title} className={style.historyStep}>
               <div className={style.bullet}></div>
               <div className={style.textContainer}>

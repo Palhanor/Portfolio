@@ -16,5 +16,5 @@ export const style = {
     content: "px-3 mt-5",
     title: "my-content-title text-xl mb-3",
     about: "my-content-text mb-4",
-    tag: (tech: string) => `my-tag mr-2 ${colorTag(tech)}`,
+    tag: (tech: string) => `my-tag mr-2 mb-2 ${colorTag(tech)}`,
 };

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import useProjects from "./hooks/useProject";
 import { style } from "./style";
 
@@ -61,7 +60,7 @@ export default function Projects() {
       <ul className={style.projectList}>
         {filteredProjects().map((project) => (
           <li key={project.id} id={project.id} className={style.project}>
-            <Link href={`/projetos/${project.id}`}>
+            <a href={`/projetos/${project.id}`}>
               <img
                 src={`/projects/${project.id}/banner.png`}
                 alt={`${project.name} banner`}
@@ -81,7 +80,7 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

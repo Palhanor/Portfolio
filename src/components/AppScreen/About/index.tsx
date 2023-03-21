@@ -1,10 +1,8 @@
-// TODO: Adicionar um campo com certificações e afins (Alura, FreeCodeCamp, DIO)...
-
 "use client";
 
 import Link from "next/link";
 import { style } from "./style";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { skill } from "@/interface/skill";
 
 export default function About() {
@@ -14,9 +12,10 @@ export default function About() {
     (async () => {
       const data = await fetch("./api/skills");
       const result = await data.json();
+      // console.log("Teste skills");
       setSkills(() => result);
     })();
-  });
+  }, []);
 
   return (
     <section className={style.container}>

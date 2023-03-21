@@ -15,37 +15,38 @@ Este projeto é a consolidação de meu portfólio profissional, visando servir 
 
 ## Próximos Passos
 
-### Geral
 - [x] Trocar a imagem de background do banner por um gradiente generativo
 - [x] Criar Hooks personalizados para abstrair complexidades locais
 - [x] Adicionar mais projetos pessoais: Searchin, Splittyn, Pokedex...
 - [x] Fazer os ajustes para a versão mobile do sistema
 - [x] Fazer deploy do sistemas através da Vercel
 - [x] Consumir a API do prório NextJS dentro dos componentes
-- [ ] Usar o sistema de revalidate para otimizar o sistema e as requisições
-### Página dos projetos
 - [x] Pegar os Readmes para exibir dentro das páginas dos projetos
 - [x] Finalizar o componente do Readme, aplicando a renderização de Markdown
+- [x] Ajeitar o design da página de projetos para desktop e mobile
+- [ ] Cortar o vídeo do QR Key para remover dados pessoais
 - [ ] Reescrever os README dos projetos que vão ser exibidos nas páginas de projetos
-- [ ] Ajeitar o design da página de projetos para desktop e mobile
-- [ ] Adicionar mais dados na API dos projetos para popular com mais informações relevantes (se tiverem)
+- [ ] Adicionar mais dados na API dos projetos para popular com mais informações relevantes (se tiverem - criação e afins)
+- [ ] Tentar receber os dados do projeto como parâmetro para não precisar de um novo fetch
+- [ ] Usar Route Handles ao invés de API Pages
+
 - [ ] Acabar de organizar a tela de projetos (unificar o layout)
 - [ ] Ajeitar os outros vídeos de apresentação dos projetos (Notely, QR Key e Pokemon)
-### Contatos
+
 - [ ] Encontrar um lugar para colocar os contatos na versão mobile (github, linkedin, medium)
-- [ ] Adicionar o campo de contatos com e-mail e caixa de mensagem
-### Outros
+- [ ] Adicionar o campo de contatos com e-mail e caixa de mensagens diretas (como evitar problemas de anonimicidade?)
+- [ ] Inserir um campo com as certificações que eu tenho (Alura, LinkedIn, FreeCodeCamp, HackerRank, DIO e afins)
+- [ ] Usar o sistema de revalidate para otimizar o sistema e as requisições
 - [ ] Criar uma sistema modular para a busca e filtro (encapsular states, funções e estilo servindo tanto para posts quanto para projects)
 - [ ] Extrair mais funções parar arquivos externos, principalmente as reutilizadas (utils ou hooks)
 - [ ] Tentar pegar dados da API do Medium (pegar e parsear o XML)
 - [ ] Melhorar o padrão de projetos do sistema (estrutura de diretórios)
 - [ ] Tentar fazer o deploy diretamente pela hostinger no meu domínio lucaspalhano.com.br (usar o bundle)
+- [ ] Pegar os artigos importados do XML do Medium diretamente para uma página local
 
 <!-- ---
 
 ## Guia de Estilo
-
-![Guia de estilos](./public/style-guide.png)
 
 ---
 

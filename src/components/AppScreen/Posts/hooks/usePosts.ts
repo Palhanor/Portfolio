@@ -1,5 +1,5 @@
 import { post } from "@/interface/post";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function usePosts() {
     const [allPosts, setAllPosts] = useState<post[]>([]);
@@ -11,6 +11,7 @@ export default function usePosts() {
         (async () => {
             const data = await fetch("./api/posts");
             const result = await data.json();
+            // console.log("Teste posts");
             setAllPosts(() => result);
             setPosts(() => result.slice(posts.length, posts.length + numPosts));
         })()

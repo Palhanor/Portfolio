@@ -8,6 +8,7 @@ export default function useProjects() {
         (async () => {
             const data = await fetch("./api/projects");
             const result = await data.json()
+            // console.log("Teste projects");
             setProjects(() => result)
         })()
     }, []);

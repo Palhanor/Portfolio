@@ -1,9 +1,7 @@
-// TODO: Criar um header com o nome do projeto e a opção de retornar
-
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -13,8 +11,11 @@ import colorTag from "@/utils/colorTag";
 import { project } from "@/interface/project";
 import useBackground from "@/hooks/usebackground";
 
+import { AiOutlineLeft } from "react-icons/ai";
+
 export default function Readme() {
   const pathname = usePathname();
+  const router = useRouter();
   const projectName = pathname?.replace("/projetos/", "");
   const { background } = useBackground();
   const [readme, setReadme] = useState("");
@@ -32,6 +33,7 @@ export default function Readme() {
       const data = await fetch("../api/projects");
       const result = await data.json();
       const projeto = result.find((proj: project) => proj.id == projectName);
+      // console.log("Teste projects");
       setProject(() => projeto);
     })();
   }, []);
@@ -42,14 +44,23 @@ export default function Readme() {
         `https://raw.githubusercontent.com/palhanor/${projectName}/main/README.md`
       );
       const responseText = await data.text();
+      // console.log("Teste Readme");
       if (responseText) setReadme(() => responseText);
     })();
   }, []);
 
   return (
     <>
-      <header className="w-full h-[8vh] flex justify-center items-center px-10">
-        <h1 className="bg-slate-100 text-2xl font-semibold">{project.name}</h1>
+      <header className="w-full h-[8vh] px-3 lg:px-16 flex items-center">
+        <div
+          className="flex items-center lg:pt-[5px] cursor-pointer"
+          onClick={() => router.back()}
+        >
+          <AiOutlineLeft size={25} />
+          <h1 className="ml-1 lg:ml-3 bg-slate-100 text-xl lg:text-3xl font-semibold lg:mb-[5px]">
+            {project.name}
+          </h1>
+        </div>
       </header>
       <div
         className="flex justify-center items-center lg:rounded-2xl lg:mt-[1vh] w-full lg:h-[88vh] lg:w-[92vw] m-auto overflow-hidden relative"
@@ -60,7 +71,7 @@ export default function Readme() {
           muted
           loop
           controls
-          className="h-[90%] lg:brightness-90"
+          className="h-[90%] lg:brightness-90 max-h-[40vh] lg:max-h-[70vh]"
         >
           <source src={`/projects/${projectName}/video.mp4`} type="video/mp4" />
         </video>
@@ -71,7 +82,7 @@ export default function Readme() {
           <div>
             <img
               src={`/projects/${projectName}/logo.png`}
-              className="w-4/12 lg:mr-3 rounded-lg float-left"
+              className="w-4/12 mr-3 rounded-lg float-left"
               alt=""
             />
 
@@ -82,7 +93,7 @@ export default function Readme() {
               {project.description}
             </div>
           </div>
-          <div className="flex justify-start w-full mt-3">
+          <div className="mt-3">
             {project.tech.map((tech) => (
               <span key={tech} className={`my-tag mr-2 mb-2 ${colorTag(tech)}`}>
                 {tech}
@@ -109,12 +120,12 @@ export default function Readme() {
           </div>
         </aside>
 
-        <div className="overflow-y-auto whitespace-pre-wrap x-full lg:w-8/12 bg-white rounded-md shadow-sm border border-solid border-gray-300">
+        <div className="overflow-y-auto whitespace-pre-wrap w-full lg:w-8/12 bg-white rounded-md shadow-sm border border-solid border-gray-300">
           <div className="p-5">
             <h2 className="text-lg font-semibold">README.md</h2>
           </div>
           <hr />
-          <div className="p-10 [&>h1]:text-4xl [&>h1]:font-bold [&>h2]:text-2xl [&>h2]:font-semibold [&>pre]:bg-slate-200 [&>pre]:p-5 [&>pre]:rounded-md">
+          <div className="p-5 lg:p-10 [&>h2]:text-2xl [&>h2]:font-semibold [&>pre]:bg-slate-200 [&>pre>code]:p-5 [&>pre]:rounded-md [&>p>a]:text-blue-600">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeRaw]}

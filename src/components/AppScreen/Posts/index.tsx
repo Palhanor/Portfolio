@@ -4,11 +4,7 @@
 //  Pega cada pos pela tag <item> => title, link, category[], pubDate e content:encoded
 //  Vai ser preciso parsear o content para pegar o src da primeira imagem (capa) e o texto do primeiro paragrafo (descricao)
 //  Depois disso deve ser possivel compor um blog dentro do meu próprio site, consumido diretamente pelo Medium
-//  Uma alternativa menos root é usar o Rapid API: https://rapidapi.com/nishujain199719-vgIfuFHZxVZ/api/medium2  https://mediumapi.com/
-
-// TODO: Modificar para fazer um lazy load dentro do useEffect, pegando os 5 primeiro e depois de 5 segundos pegando o resto de uma so vez
-//  Depois disso, a funcao do botao eh so exibir de 5 em 5
-// Mase se o usuario for usar algum filtro, mostra logo tudo de uma vez...
+//  Uma alternativa menos root é usar o Rapid API: https://rapidapi.com/nishujain199719-vgIfuFHZxVZ/api/medium2 - https://mediumapi.com/
 
 "use client";
 
@@ -74,7 +70,7 @@ export default function Posts() {
       {filteredPosts().map((post: any) => (
         <article key={post.id} className={style.post}>
           <a href={post.url} target="_blank" className={style.postUrl}>
-            <img src={post.imgSrc} alt={post.title} className={style.postImg} />
+            <img src={post.img} alt={post.title} className={style.postImg} />
             <div className={style.postContent}>
               <div className={style.postDate}>{post.date}</div>
               <h3 className={style.postTitle}>{post.title}</h3>

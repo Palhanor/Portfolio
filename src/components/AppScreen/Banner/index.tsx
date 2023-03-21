@@ -2,7 +2,7 @@
 
 import React from "react";
 import { FaChevronDown } from "react-icons/fa";
-import useBackground from "./hooks/usebackground";
+import useBackground from "@/hooks/usebackground";
 import useGif from "./hooks/useGif";
 import { style } from "./style";
 

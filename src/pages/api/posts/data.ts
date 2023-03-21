@@ -2,7 +2,7 @@ export const posts = [
     {
         id: 5,
         url: "https://medium.com/@lucaspalhanof/cria%C3%A7%C3%A3o-de-ascii-art-usando-python-7c4724491a9?source=rss-6a633f9d0fd7------2",
-        imgSrc: "https://cdn-images-1.medium.com/max/1024/1*_yybdN1rMCKmweos2r-Z2A.png",
+        img: "https://cdn-images-1.medium.com/max/1024/1*_yybdN1rMCKmweos2r-Z2A.png",
         date: "02/03/2023",
         title: "Criação de ASCII Art usando Python",
         description: `Eu sempre achei muito interessante aquelas ilustrações feitas em terminais de computadores
@@ -14,7 +14,7 @@ export const posts = [
     {
         id: 4,
         url: "https://medium.com/@lucaspalhanof/o-zen-do-java-e-a-developer-experience-dx-847b3d787699?source=rss-6a633f9d0fd7------2",
-        imgSrc: "https://cdn-images-1.medium.com/max/1024/1*7RnsdscHeMix46awfd-vtA.png",
+        img: "https://cdn-images-1.medium.com/max/1024/1*7RnsdscHeMix46awfd-vtA.png",
         date: "13/02/2023",
         title: "O Zen do Java e a Developer Experience (DX)",
         description: `Muitas vezes nós desenvolvedores ouvimos falar sobre UX (User Experience), 
@@ -27,7 +27,7 @@ export const posts = [
     {
         id: 3,
         url: "https://medium.com/@lucaspalhanof/buscando-um-bom-algoritmo-de-buscas-1ae8bd0ef04b?source=rss-6a633f9d0fd7------2",
-        imgSrc: "https://cdn-images-1.medium.com/max/1000/0*ZFz5UCEjjBz7Qg8k",
+        img: "https://cdn-images-1.medium.com/max/1000/0*ZFz5UCEjjBz7Qg8k",
         date: "28/01/2023",
         title: "Buscando um bom algoritmo de buscas",
         description: `No dia a dia é normal não conseguirmos encontrar coisas que precisamos, 
@@ -39,7 +39,7 @@ export const posts = [
     {
         id: 2,
         url: "https://medium.com/@lucaspalhanof/o-inevit%C3%A1vel-v%C3%ADcio-em-intelig%C3%AAncias-artificiais-24e5532d0d59?source=rss-6a633f9d0fd7------2",
-        imgSrc: "https://cdn-images-1.medium.com/max/500/0*-xex7RYPY0ACVOeV.gif",
+        img: "https://cdn-images-1.medium.com/max/500/0*-xex7RYPY0ACVOeV.gif",
         date: "12/01/2023",
         title: "O inevitável vício em Inteligências Artificiais",
         description: `[…] Eu me tornei vítima do vício em Inteligência Artificial. 
@@ -56,7 +56,7 @@ export const posts = [
     {
         id: 1,
         url: "https://medium.com/@lucaspalhanof/script-do-dia-perdendo-na-mega-da-virada-com-estilo-usando-python-5828b081b64d?source=rss-6a633f9d0fd7------2",
-        imgSrc: "https://cdn-images-1.medium.com/max/700/1*jNyIXzCrMC7gxQARFaFnPA.jpeg",
+        img: "https://cdn-images-1.medium.com/max/700/1*jNyIXzCrMC7gxQARFaFnPA.jpeg",
         date: "31/12/2022",
         title: "Perdendo na Mega da Virada com estilo usando Python",
         description: `Quem quer ser um meio bilionário? Não olhem para mim, 

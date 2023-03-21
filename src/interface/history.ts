@@ -1,5 +1,7 @@
 export interface history {
-    year: string;
+    start: number;
+    end: number;
     title: string;
+    location: string;
     description: string;
 }

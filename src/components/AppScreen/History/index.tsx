@@ -16,8 +16,12 @@ export default function History() {
             <li key={step.title} className={style.historyStep}>
               <div className={style.bullet}></div>
               <div className={style.textContainer}>
-                <div className={style.stepDate}>{step.year}</div>
-                <h3 className={style.stepTitle}>{step.title}</h3>
+                <div className={style.stepDate}>
+                  {step.start} - {step.end}
+                </div>
+                <h3 className={style.stepTitle}>
+                  {step.title} ({step.location})
+                </h3>
                 <p className={style.stepDescription}>{step.description}</p>
               </div>
             </li>

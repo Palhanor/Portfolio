@@ -1,9 +1,4 @@
 // TODO: Criar um header com o nome do projeto e a opção de retornar
-// TODO: Unificar a interface de todos os projetos em um layout unico (posts/layout.tsx)
-// TODO: Trocar a API do Github por uma API minha propria
-// TODO: Refazer os videos demonstrativos dos projetos
-
-// TODO: Criado em...
 
 "use client";
 
@@ -16,10 +11,12 @@ import rehypeRaw from "rehype-raw";
 
 import colorTag from "@/utils/colorTag";
 import { project } from "@/interface/project";
+import useBackground from "@/hooks/usebackground";
 
 export default function Readme() {
   const pathname = usePathname();
   const projectName = pathname?.replace("/projetos/", "");
+  const { background } = useBackground();
   const [readme, setReadme] = useState("");
   const [project, setProject] = useState<project>({
     id: "",
@@ -51,33 +48,41 @@ export default function Readme() {
 
   return (
     <>
-      <div className="lg:rounded-2xl lg:mt-[3vh] w-full lg:h-[94vh] lg:w-[84vw] m-auto overflow-hidden relative">
-        <span className="hidden lg:block text-3xl pt-7 pl-10 font-semibold bg-transparent absolute text-white z-10 top-0">
-          {project.name}
-        </span>
-        <video autoPlay muted loop className="lg:brightness-90">
+      <header className="w-full h-[8vh] flex justify-center items-center px-10">
+        <h1 className="bg-slate-100 text-2xl font-semibold">{project.name}</h1>
+      </header>
+      <div
+        className="flex justify-center items-center lg:rounded-2xl lg:mt-[1vh] w-full lg:h-[88vh] lg:w-[92vw] m-auto overflow-hidden relative"
+        style={{ background }}
+      >
+        <video
+          autoPlay
+          muted
+          loop
+          controls
+          className="h-[90%] lg:brightness-90"
+        >
           <source src={`/projects/${projectName}/video.mp4`} type="video/mp4" />
         </video>
       </div>
 
       <main className="flex justify-around items-start flex-col px-4 lg:px-0 lg:flex-row-reverse mt-10 lg:w-[84vw] m-auto gap-9 mb-10">
         <aside className="bg-white p-5 w-full lg:w-4/12 shadow-sm mx-auto rounded-md border border-solid border-gray-300">
-          <div className="flex items-start gap-5 mb-5">
+          <div>
             <img
               src={`/projects/${projectName}/logo.png`}
-              className="w-4/12 lg:m-auto rounded-lg"
+              className="w-4/12 lg:mr-3 rounded-lg float-left"
               alt=""
             />
-            <div className="w-8/12">
-              <h2 className="text-xl lg:text-2xl font-medium mb-3">
-                {project.name}
-              </h2>
-              <div className="text-slate-700 text-md lg:text-lg">
-                {project.description}
-              </div>
+
+            <h2 className="text-xl lg:text-2xl font-medium mb-3">
+              {project.name}
+            </h2>
+            <div className="text-slate-700 lg:text-base">
+              {project.description}
             </div>
           </div>
-          <div>
+          <div className="flex justify-start w-full mt-3">
             {project.tech.map((tech) => (
               <span key={tech} className={`my-tag mr-2 mb-2 ${colorTag(tech)}`}>
                 {tech}

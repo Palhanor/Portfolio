@@ -1,56 +1,49 @@
-<h1 align="center">Portfólio</h1>
-
-## Sobre
+## Sobre o Portfólio
 
 Este projeto é a consolidação de meu portfólio profissional, visando servir como um repositório e vitrine para meus projetos e artigos. Através deste pretendo centralizar todas as informações pertinentes acerca dos avanços na minha carreira de desenvolvedor de sistemas.
 
 ---
 
-## Tecnologias
+## Tecnologias Utilizadas
 
-<p align="left">
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS"/>
-</p>
-
-Para além das tecnologias previamente descritas, o projeto foi elaborado através do framework NextJS.
+- **NextJS**: O Framework base sobre o qual este projeto foi construido. Por compor diversas soluções embarcadas, tais como o sistema de rotas e de API, torna-se uma grande ferramenta de abstração de soluções para sistemas Front-end, principalmente a partir de sua versão 13.
+- **TypeScript**: A linguagem de programção base do projeto é o TypeScript, visando permitir mais previsibilidade no tratamento de dados e maior capacidade de escalar o projeto com consistência e simplicidade na correção de eventuais erros estruturais.
+- **TailwindCSS**: A estilização ficou a cargo da biblioteca TaiwlindCSS, que é muito eficaz em criar estilos avançados de forma relativamente simples. Através desta é possível fazer sistemas responsivos e reativos, sem o engessamento de outras bibliotecas de estilização do React como o Bootstrap. Para tentar mitigar a verbosidade das classes atribuidas aos elementos da página, foi estabelecido uma estrutura de importação dos estilos no formato de objetos a partir dos arquivos `style.ts`.
+- **Markdown**: Esta notação foi utilizada para compor a descrição dos projetos dentro de suas respectivas páginas, sendo renderizado através do Readme extraído diretamente de cada repositório de projeto vindo do GitHub.
 
 ---
 
 ## Próximos Passos
 
+### Geral
 - [x] Trocar a imagem de background do banner por um gradiente generativo
 - [x] Criar Hooks personalizados para abstrair complexidades locais
 - [x] Adicionar mais projetos pessoais: Searchin, Splittyn, Pokedex...
 - [x] Fazer os ajustes para a versão mobile do sistema
-- [x] Fazer deploy através da Vercel
-- [x] Pegar os Readmes para exibir dentro das páginas dos proejtos
+- [x] Fazer deploy do sistemas através da Vercel
+- [x] Consumir a API do prório NextJS dentro dos componentes
+- [ ] Usar o sistema de revalidate para otimizar o sistema e as requisições
+### Página dos projetos
+- [x] Pegar os Readmes para exibir dentro das páginas dos projetos
 - [x] Finalizar o componente do Readme, aplicando a renderização de Markdown
-- [x] Consumir a API do prório NextJS dentor dos componentes
-- [ ] Expandir os dados das APIs para tornar o sistema mais robusto
+- [ ] Reescrever os README dos projetos que vão ser exibidos nas páginas de projetos
+- [ ] Ajeitar o design da página de projetos para desktop e mobile
+- [ ] Adicionar mais dados na API dos projetos para popular com mais informações relevantes (se tiverem)
 - [ ] Acabar de organizar a tela de projetos (unificar o layout)
-- [ ] Adicionar coisas extra como videos, frameworks usados, libs, mais informações e afins
-- [ ] Adicionar estilizações especificas para cada projetos
-- [ ] Encontrar um lugar para colocar os contatos na versão mobile
-- [ ] Criar uma estrutura de API interna usando o pages/api
-- [ ] Usar o sistema de revalidate para dar um tempo de refras com a função fetch()
-- [ ] Tentar deixar a API privada (ver se é possível ou memso necessário...)
-
----
-
-- [ ] Criar uma página para cada projeto, ao menos uma página simples (personalizada)
-- [ ] Criar uma sistema modular para a busca e filtro (encapsular states, funções e estilo servindo tanto para posts quanto para projects)
-- [ ] Extrair mais funções parar arquivos externos, principalmente as reutilizadas
-- [ ] Tentar pegar dados da API do Medium (que provavelmente não tem uma boa API)
-- [ ] Melhorar o padrão de projetos do sistema (estrutura de diretórios)
+- [ ] Ajeitar os outros vídeos de apresentação dos projetos (Notely, QR Key e Pokemon)
+### Contatos
+- [ ] Encontrar um lugar para colocar os contatos na versão mobile (github, linkedin, medium)
 - [ ] Adicionar o campo de contatos com e-mail e caixa de mensagem
-- [ ] Ajeitar o sistema de lazy load da área de posts (carregar tudo depois de 5 segundos e só ir exibindo)
-- [ ] Extrair todos os dados para uma API read-only com acesso por token de autenticação (Spring Boot, NodeJS, Flask)
-- [ ] Tentar fazer o deploy diretamente pela hostinger no meu domínio lucaspalhano.com.br
+### Outros
+- [ ] Criar uma sistema modular para a busca e filtro (encapsular states, funções e estilo servindo tanto para posts quanto para projects)
+- [ ] Extrair mais funções parar arquivos externos, principalmente as reutilizadas (utils ou hooks)
+- [ ] Tentar pegar dados da API do Medium (pegar e parsear o XML)
+- [ ] Melhorar o padrão de projetos do sistema (estrutura de diretórios)
+- [ ] Tentar fazer o deploy diretamente pela hostinger no meu domínio lucaspalhano.com.br (usar o bundle)
 
----
+<!-- ---
 
-<!-- ## Guia de Estilo
+## Guia de Estilo
 
 ![Guia de estilos](./public/style-guide.png)
 

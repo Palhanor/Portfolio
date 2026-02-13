@@ -22,7 +22,8 @@ export default function usePosts() {
         if (newPosts.length > 0) {
             const newRef = [...posts, ...newPosts];
             setPosts(() => newRef);
-            if (newPosts.length < numPosts) {
+            // Check if we have reached the end of the list *after* adding new posts
+            if (newRef.length >= allPosts.length) {
                 setMorePosts(() => false);
             }
         } else {

@@ -1,5 +1,18 @@
 export const history = [
   {
+    start: 2024,
+    end: 2026,
+    location: "VTEX",
+    title: "Arquiteto de Integração",
+    description: `Atualmente, tendo em vista a necessidade de formalizar os
+        conhecimentos adquiridos e desenvolvidos na Altura, surgiu a
+        oportunidade de cursar um curso superior tecnólogo na Cruzeiro
+        do Sul. Até então a experiência tem sido extremamente
+        engrandecedora, possibilitando o contato com toda uma nova gama
+        de conhecimentos relevantes para um profissional da área de
+        desenvolvimento de software.`,
+  },
+  {
     start: 2022,
     end: 2024,
     location: "Cruzeiro do Sul",
@@ -23,19 +36,6 @@ export const history = [
       a área que sempre me fascinou, resolvi começar a cursar a Alura,
       onde pude voltar a estudar temas diversos sobre programação,
       como HTML, CSS, Front-end, React e React Native.`,
-  },
-  {
-    start: 2019,
-    end: 2020,
-    title: "Estágio em Comércio Exterior",
-    location: "Líderi",
-    description: `Ainda imerso no contexto da graduação no curso de Relações
-      Internacionais, me deparei com a oportunidade de estagiar na
-      Líderi, a Empresa Júnior de RI. Esta experiência me foi
-      extremamente engrandecedora e gratificante, me possibilitando
-      atuar no setor de venda através do cargo de diretor comercial,
-      onde precisei traçar estratégias e liderar equipes para alcançar
-      as metas de faturamento da empresa.`,
   },
   {
     start: 2015,

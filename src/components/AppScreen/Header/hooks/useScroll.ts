@@ -6,7 +6,7 @@ export default function useScroll() {
     useEffect(() => {
         window.addEventListener("scroll", changeScroll);
         return () => window.removeEventListener("scroll", changeScroll);
-    });
+    }, []);
 
     const changeScroll = () => {
         setScroll(() => window.scrollY);

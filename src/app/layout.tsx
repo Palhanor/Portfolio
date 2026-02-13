@@ -1,4 +1,12 @@
 import "./globals.css";
+import { Inter } from "next/font/google"; // Import Inter font
+
+// Configure the font
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Lucas Palhano Fonseca - Portfólio",
@@ -13,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
-      <body className="bg-slate-100">{children}</body>
+    <html lang="pt-BR" className={`dark ${inter.variable}`}>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }

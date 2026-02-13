@@ -1,5 +1,6 @@
-import { projects } from "./data"
+import type { NextApiRequest, NextApiResponse } from "next";
+import { projects } from "./data";
 
-export default function handler(req: any, res: any) {
-    res.status(200).json(projects)
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    res.status(200).json(projects);
 }

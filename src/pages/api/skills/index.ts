@@ -1,5 +1,6 @@
-import { skills } from "./data"
+import type { NextApiRequest, NextApiResponse } from "next";
+import { skills } from "./data";
 
-export default function handler(req: any, res: any) {
-    res.status(200).json(skills)
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    res.status(200).json(skills);
 }
